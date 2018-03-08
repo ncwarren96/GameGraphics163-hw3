@@ -90,11 +90,11 @@ Extra credit (10 pts):
 	    return max(distA, -distB);
 	}
 
-	vec3 opTx( vec3 p, mat4 m )
-	{
-	    vec3 q = invert(m)*p;
-	    return primitive(q);
-	}
+	// vec3 opTx( vec3 p, mat4 m )
+	// {
+	//     vec3 q = invert(m)*p;
+	//     return primitive(q);
+	// }
 
 	float sceneSDF(vec3 p) {
 	    //float sphereDist = sphereSDF(p / 1.2) * 1.2;
@@ -227,7 +227,7 @@ Extra credit (10 pts):
 	    if (dist > MAX_DIST - EPSILON) {
 	        // Didn't hit anything
 	        gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
-			return;
+			//return;
 	    }
 
 	    // closes point on the surface to the eyepoint along teh view ray
